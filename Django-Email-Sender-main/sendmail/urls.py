@@ -19,6 +19,8 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index),
     path('submit',views.submit),
+    path('teachers/', views.teachers),
+    path('students/', views.student),
+    path('', views.login)
 ]

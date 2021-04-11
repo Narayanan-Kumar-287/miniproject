@@ -3,9 +3,14 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
 
+def teachers(request):
+    return render(request, "index.html")
 
-def index(request):
-    return render(request,'index.html',{})
+def student(request):
+    return render(request, "student.html")
+
+def login(request):
+    return render(request, "login.html")        
 
 def submit(request):
     if request.method == 'POST':
